@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+a{
+    text-decoration: none;
+}
+ul, ol, li{
+    list-style: none;
+}
+
+body{
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    padding-left: 290px;
+    padding-right: 290px;
+background-color: pink;
+}
+h1{
+    text-align: center;
+    padding-top: 15px;
+}
+.titulo2{
+    color: black;
+}
+.galeria{
+    
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 12px;
+    grid-template-areas: 
+    "f1 f1 f1 f1 f1 f2 f2 f2 f3 f3 f3"
+    "f1 f1 f1 f1 f1 f4 f4 f4 f5 f5 f5"
+    "f6 f6 f6 f7 f7 f7 f8 f8 f8 f8 f8";
+}
+.foto{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+.foto:nth-child(1){
+    grid-area: f1;
+    background-image: url(./img/gumball.jpg);
+    
+
+}
+.foto:nth-child(2){
+    grid-area: f2;
+    background-image: url(./img/cans.jpg);
+    
+}
+.foto:nth-child(3){
+    grid-area: f3;
+    background-image: url(./img/eae.jpg);
+}
+.foto:nth-child(4){
+    grid-area: f4;
+    background-image: url(./img/int.jpg);
+
+    
+}
+.foto:nth-child(5){
+    grid-area: f5;
+    background-image: url(./img/no.jpg);
+}
+.foto:nth-child(6){
+    grid-area: f6;
+    background-image: url(./img/fof.jpg);
+}
+.foto:nth-child(7){
+    grid-area: f7;
+    background-image: url(./img/rlf.jpg);
+    
+}
+.foto:nth-child(8){
+    grid-area: f8;
+    background-image: url(./img/grande.jpg);
+}
+.foto__info{
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    background-color: #0009;
+    color: white;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: .3s;
+    text-align: center;
+    padding-top: 20px ;
+
+}
+.foto:hover > .foto__info{
+    transform: translateY(0%);
+}
+.botao {
+    text-align: center;
+    background-color: whitesmoke;
+    width: 280px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    left: 510px;
+    top: 500px;
+    position: absolute;
+    border-radius: 32px;
+    padding: 21.5px 0px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    body{
+        padding-left: 12px ;
+        padding-right: 12px ;
+    }
+    .galeria{
+    display: flex;
+    flex-direction: column;
+    }
+    .foto{
+        width: 100%;
+        height: 33vh;
+    }
+}
